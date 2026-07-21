@@ -2,12 +2,12 @@ class Jt < Formula
   desc "Jira as a remote VCS for agent workflows"
   homepage "https://github.com/owenoclee/jt"
   url on_arch_conditional(
-    arm:   "https://github.com/owenoclee/jt/releases/download/v0.2.0/jt-aarch64-apple-darwin.tar.gz",
-    intel: "https://github.com/owenoclee/jt/releases/download/v0.2.0/jt-x86_64-apple-darwin.tar.gz",
+    arm:   "https://github.com/owenoclee/jt/releases/download/v0.2.1/jt-aarch64-apple-darwin.tar.gz",
+    intel: "https://github.com/owenoclee/jt/releases/download/v0.2.1/jt-x86_64-apple-darwin.tar.gz",
   )
   sha256 on_arch_conditional(
-    arm:   "9679a44c614ed2e8791d69c02f1ae127ef8c3929a24283f0b9257a50236985ce",
-    intel: "a4c0576df9af70338e7263181caffb378c6b3d3bd53cfe11e9a3513aaa7bc729",
+    arm:   "ff6177910f8c1c7dea04bf4c580db0143cf07fbe7ac6e811bb657cf828a6ef43",
+    intel: "d7e55b62978428b339cbb41fec279f8d9ae340c75d17b81f1ea7c9afb422d7d0",
   )
   license "MIT"
 
