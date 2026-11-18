@@ -2,13 +2,13 @@ class JtRc < Formula
   desc "Jira as a remote VCS for agent workflows (release candidates)"
   homepage "https://github.com/owenoclee/jt"
   url on_arch_conditional(
-    arm:   "https://github.com/owenoclee/jt/releases/download/v0.6.0-rc.4/jt-aarch64-apple-darwin.tar.gz",
-    intel: "https://github.com/owenoclee/jt/releases/download/v0.6.0-rc.4/jt-x86_64-apple-darwin.tar.gz",
+    arm:   "https://github.com/owenoclee/jt/releases/download/v0.6.0/jt-aarch64-apple-darwin.tar.gz",
+    intel: "https://github.com/owenoclee/jt/releases/download/v0.6.0/jt-x86_64-apple-darwin.tar.gz",
   )
-  version "0.6.0-rc.4"
+  version "0.6.0"
   sha256 on_arch_conditional(
-    arm:   "807502687b049205643963623d816551e8237ff6880174794d9866a10992f2d7",
-    intel: "bb67f4936b60396430760f3efc1bd2d77b7ddeba15e8c00783178d5cc9757a03",
+    arm:   "b9211c0001e9c21951941c40ef2db3021658ae4d00f1a145f106ec088e363e66",
+    intel: "1c9b0e0a56e775839f8994b1bef6a9c288e91c3909b3e728575dc6498e594c99",
   )
   license "MIT"
 

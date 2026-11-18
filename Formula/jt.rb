@@ -2,19 +2,29 @@ class Jt < Formula
   desc "Jira as a remote VCS for agent workflows"
   homepage "https://github.com/owenoclee/jt"
   url on_arch_conditional(
-    arm:   "https://github.com/owenoclee/jt/releases/download/v0.5.0/jt-aarch64-apple-darwin.tar.gz",
-    intel: "https://github.com/owenoclee/jt/releases/download/v0.5.0/jt-x86_64-apple-darwin.tar.gz",
+    arm:   "https://github.com/owenoclee/jt/releases/download/v0.6.0/jt-aarch64-apple-darwin.tar.gz",
+    intel: "https://github.com/owenoclee/jt/releases/download/v0.6.0/jt-x86_64-apple-darwin.tar.gz",
   )
   sha256 on_arch_conditional(
-    arm:   "4751bfac25633e54f157e794261e504ec0ede00c097e85327e8ca14a8bce24bf",
-    intel: "413d893e88090daa32a22d1d6067d7581a197ba93aa25ee4b657aec5941fdc9d",
+    arm:   "b9211c0001e9c21951941c40ef2db3021658ae4d00f1a145f106ec088e363e66",
+    intel: "1c9b0e0a56e775839f8994b1bef6a9c288e91c3909b3e728575dc6498e594c99",
   )
   license "MIT"
 
   depends_on :macos
 
+  conflicts_with "owenoclee/tap/jt-rc", because: "both install a `jt` binary"
+
   def install
     bin.install "jt"
+  end
+
+  def caveats
+    <<~EOS
+      To let your coding agent use jt, install its skill:
+        jt skill install claude-code   # or: jt skill install codex
+      After an upgrade, jt refreshes an installed skill by itself.
+    EOS
   end
 
   test do
